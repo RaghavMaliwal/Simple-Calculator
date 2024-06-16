@@ -45,8 +45,10 @@ function displayNext() {
   if (i < values.length) {
     display.value = values[i];
     i = i + 2;
-  } else {
+  } else if (values[values.length - 1] != undefined) {
     display.value = values[values.length - 1];
+  } else {
+    display.value = "0";
   }
 }
 
